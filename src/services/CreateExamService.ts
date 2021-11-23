@@ -1,4 +1,4 @@
-import { getCustomRepository, getRepository } from 'typeorm'
+import { getCustomRepository } from 'typeorm'
 
 import Exam from '../models/Exam'
 import ExamsRepository from '../repositories/ExamsRepository';
