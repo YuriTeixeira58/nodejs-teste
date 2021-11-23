@@ -1,0 +1,171 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NodeJS - Exame Toxicológico",
+    "description": "API para exame toxicológico",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["Usuário"],
+        "summary": "Cadastro",
+        "description": "Criar um novo usuário",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Yuri Teixeira",
+                  "email": "yuriteixeira588@gmail.com",
+                  "password": "123123"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "email": "Criado com sucesso"
+          },
+          "500": {
+            "email": "Email já está em uso"
+          }
+        }
+      }
+    },
+    "/sessions": {
+      "post": {
+        "tags": ["Autenticação"],
+        "summary": "Login",
+        "description": "Logar com usuário",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "email": "yuriteixeira588@gmail.com",
+                  "password": "123123"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "email": "Criado com sucesso"
+          },
+          "500": {
+            "email": "Email já está em uso"
+          }
+        }
+      }
+    },
+    "/exams": {
+      "post": {
+        "tags": ["Exame Toxicológico"],
+        "summary": "Cadastro",
+        "description": "Cadastrar Exame",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "number"
+                  },
+                  "cocaine": {
+                    "type": "number"
+                  },
+                  "amphetamine": {
+                    "type": "number"
+                  },
+                  "methamphetamine": {
+                    "type": "number"
+                  },
+                  "mda": {
+                    "type": "number"
+                  },
+                  "mdma": {
+                    "type": "number"
+                  },
+                  "thc": {
+                    "type": "number"
+                  },
+                  "morphine": {
+                    "type": "number"
+                  },
+                  "codeine": {
+                    "type": "number"
+                  },
+                  "heroin": {
+                    "type": "number"
+                  },
+                  "benzoylecgonine": {
+                    "type": "number"
+                  },
+                  "cocaethylene": {
+                    "type": "number"
+                  },
+                  "norcocaine": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "code": 421222,
+                  "cocaine": 0.3,
+                  "amphetamine": 0.1,
+                  "methamphetamine": 0.1,
+                  "mda": 0,
+                  "mdma": 0.1,
+                  "thc": 0,
+                  "morphine": 0.1,
+                  "codeine": 0,
+                  "heroin": 0,
+                  "benzoylecgonine": 0.1,
+                  "cocaethylene": 0,
+                  "norcocaine": 0
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "email": "Criado com sucesso"
+          },
+          "500": {
+            "email": "Email já está em uso"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Exame Toxicológico"],
+        "summary": "Exames",
+        "description": "Todos os Exames"
+      }
+    }
+  }
+}

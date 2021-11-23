@@ -1,10 +1,10 @@
 {
   "type": "postgres",
-  "port": 5432,
+  "port": 5433,
   "host": "127.0.0.1",
   "username": "postgres",
-  "password": "",
-  "database": "",
+  "password": "515459",
+  "database": "teste-dev06",
   "entities": [
     "./src/models/*.ts"
   ],
